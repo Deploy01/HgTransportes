@@ -1,10 +1,14 @@
+:root {
+    --bg_color: #1d2d44;
+}
+
 /* header */
 .container-bar {
     display: none;
 }
   
 .container {
-    background-color: #1d2d44;
+    background-color: var(--bg_color);
     display: flex;
     justify-content: space-between;
     height: 150px;
@@ -32,7 +36,16 @@
     align-items: center;
 }
 
-.links a{
+#menu, .login_link {
+    background-color: #3e5c76;
+    padding: 10px;
+    border: black 1px ;
+    border-radius: 10px;
+}
+
+
+
+.links a, #menu, #input_logout{
     text-decoration: none;
     color: #fff;
     margin: 10px;
@@ -40,10 +53,37 @@
     font-size: 19px;
     transition: .4 ease-in-out;
 }
-
-.links a:hover {
-    color: #e5e5e5;
+#display_menu a, #input_logout{
+    color: black;
 }
+
+#display_menu a:hover, #input_logout:hover{
+    cursor: pointer;
+}
+#input_logout {
+    background-color: #bebebe69;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.links a:hover, #menu:hover{
+    color: #cecdcd;
+    cursor: pointer;
+}
+
+
+#display_menu {
+    width: 16dvw;
+    max-width: 293px;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+
 
 @media only screen and (max-width: 1024px) {
     .links a{

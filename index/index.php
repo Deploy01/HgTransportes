@@ -1,8 +1,3 @@
-<?php 
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -16,7 +11,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<?php include("../header/header.php");?>
+    <?php include("../header/header.php");?>
 
 
     <nav id="navId">

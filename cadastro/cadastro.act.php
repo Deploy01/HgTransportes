@@ -5,7 +5,7 @@
     extract($_POST);
 
     $msg = "";
-    $destino = "location:cadastro.php";
+    $destino = "location:../index/index.php";
 
     if($confimacaoSenha != $senha) {
         echo "<p>As senhas digitadas devem ser iguais </p>";

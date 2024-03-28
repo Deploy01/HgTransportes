@@ -12,53 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* header */
-.container-bar {
-    display: none;
-}
-  
-.container {
-    background-color: #1d2d44;
-    display: flex;
-    justify-content: space-between;
-    height: 150px;
-}
-
-.row-header {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
-    width: 270px;
-    height: 81px;
-    margin-left: 20px;
-}
-
-.links {
-    display: flex;
-    align-items: center;
-}
-
-.links a{
-    text-decoration: none;
-    color: #fff;
-    margin: 10px;
-    margin-right: 21px;
-    font-size: 19px;
-    transition: .4 ease-in-out;
-}
-
-.links a:hover {
-    color: #e5e5e5;
-}
-
-
 /* nav */
 .rastreio-input {
     background-color: #3e5c76;

@@ -24,7 +24,7 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
             $_SESSION['id'] = $user['id'];
             $_SESSION['nome'] = $user['nome'];
         
-            header('location:../painel.php');
+            header('location:../index/index.php');
         } else {
             echo "FALHOU. EMAIL E SENHA";
         }

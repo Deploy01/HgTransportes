@@ -1,12 +1,10 @@
 <?php 
-
-        session_start();
-        if (isset($_SESSION['msg'])) {
-            echo $_SESSION['msg'];
-            unset($_SESSION['msg']);
-        }
-
-    ?>
+    session_start();
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -62,3 +60,4 @@
 
 <!-- verificar @ de email -->
 <!-- criptografar dados -->
+<!-- style se repetir senha falhou -->
