@@ -1,0 +1,1 @@
+INSERT INTO `userdata_cadastro` (`id`, `nome`, `email`, `doc`, `senha`) VALUES (null, '$nome', '$email', '$doc', '$senha');
