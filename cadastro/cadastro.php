@@ -59,5 +59,6 @@
 </html>
 
 <!-- verificar @ de email -->
-<!-- criptografar dados -->
+<!-- criptografar dados (documento)-->
 <!-- style se repetir senha falhou -->
+<!-- necessario colocar todos os dados, não só cpf e senha. -->

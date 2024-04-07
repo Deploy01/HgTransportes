@@ -10,14 +10,12 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
         $documento = $con -> real_escape_string($_POST['doc_login']);
         $senha = $con -> real_escape_string($_POST['senha_login']);
 
-        $sql__code = "SELECT * FROM userdata_cadastro WHERE doc = '$documento' AND senha = '$senha'";
+        $sql__code = "SELECT * FROM userdata_cadastro WHERE doc = '$documento'";
         $sql__query = $con -> query($sql__code) or die("Falhou". $con -> error);
 
-        $quantidade = $sql__query -> num_rows;
+        $user = $sql__query->fetch_assoc();
 
-        if($quantidade > 0) {
-            $user = $sql__query->fetch_assoc();
-
+        if(password_verify($senha, $user['senha']) && $user['doc'] == $documento){
             if(!isset($_SESSION)) {
                 session_start();
             }
@@ -26,7 +24,7 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
         
             header('location:../index/index.php');
         } else {
-            echo "FALHOU. EMAIL E SENHA";
+            echo "FALHOU. EMAIL OU SENHA";
         }
         
     }

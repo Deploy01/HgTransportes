@@ -3,7 +3,7 @@
             <div class="footer-links">
                 <div class="footer-section">
                     <a href="../index/index.php"><img src="../img/logo-background.png" alt="logo"></a>
-                    <p>A HG Transportes é uma empresa fictícia, ou seja, a HG Transporte não existe. O site foi desenvolvido exclusivamente para fins pedagógicos.</p>
+                    <p>A HG Transportes é uma empresa fictícia. O site foi desenvolvido exclusivamente para fins pedagógicos.</p>
                 </div>
 
                 <div class="footer-address">

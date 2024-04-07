@@ -4,6 +4,8 @@
 
     extract($_POST);
 
+    $hash_senha = password_hash($senha, PASSWORD_DEFAULT);
+
     $msg = "";
     $destino = "location:../index/index.php";
 
@@ -11,7 +13,7 @@
         echo "<p>As senhas digitadas devem ser iguais </p>";
         header("location:cadastro.php");
     }else {
-        if(mysqli_query($con, "INSERT INTO `userdata_cadastro` (`id`, `nome`, `email`, `doc`, `senha`) VALUES (null, '$nome', '$email', '$doc', '$senha');")) {
+        if(mysqli_query($con, "INSERT INTO `userdata_cadastro` (`id`, `nome`, `email`, `doc`, `senha`) VALUES (null, '$nome', '$email', '$doc', '$hash_senha');")) {
             $msg = "<p class='sucesso'> Registrado </p>";
         } else {
             $msg = "Deu erro";

@@ -18,7 +18,7 @@
             <div class="container-article">
                 <div class="text-box">
                     <h1>NÃO SEJA TÍMIDO!</h1>
-                    <p>Fique a vontade para entrar em contato conosco. Nosso canal está aberto 24 horas para ouvir reclamações, projetos, ideias e sugestões.</p>
+                    <p>Fique a vontade para entrar em contato conosco. Nosso canal está aberto 24 horas para ouvir reclamações, projetos, ideias ou sugestões.</p>
                     <i class="fa-solid fa-envelope fa-2xl"></i>
                     <p>Me mande um e-mail!</p>
                     <address>
