@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços | HG Transportes</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../header/header.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8aca4bf827.js" crossorigin="anonymous"></script>
 
 </head>
-<body id="body-test">
+<body>
     <?php include("../header/header.php");?>
 
 
@@ -85,7 +84,7 @@
                         <h2>Carga fracionada</h2>
                         <div class="hover-text">
                             <span>Carga fracionada refere-se ao transporte de mercadorias em quantidades menores do que a capacidade total de um contêiner, reboque ou veículo de carga.</span>
-                            <button id="orcamento">Solicitar orçamento</button>
+                            <button id="orcamento1">Solicitar orçamento</button>
                             
                         </div>
                     </div>
@@ -148,6 +147,6 @@
 
     <?php include("../footer/footer.php");?>
 
+    <script src="servicos.js"></script>
 </body>
-<script src="servicos.js"></script>
 </html>

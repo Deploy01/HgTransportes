@@ -135,3 +135,67 @@ address {
 .footer-bottom p {
     margin: 0;
 }
+
+@media only screen and (max-width: 1024px) {
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 748px) {
+    /* footer */
+    .container-footer {
+        padding: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section,
+    .footer-address,
+    .footer-section-links {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .info-contact{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-contact i{
+        margin-right: 5px;
+    }
+
+    .info-contact i, .info-contact-address i {
+        width: 15px;
+        margin-right: 0;
+    }
+
+    .footer-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-section-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section-links ul li {
+        margin: 10px 0;
+    }
+
+    .footer-section-links a {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}

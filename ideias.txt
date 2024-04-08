@@ -1,0 +1,15 @@
+//index
+<!-- consertar carrosel -->
+
+//cadastro
+<!-- verificar @ de email -->
+<!-- criptografar dados (documento)-->
+<!-- style se repetir senha falhou -->
+<!-- necessario colocar todos os dados, não só cpf e senha. -->
+
+//login
+<!-- login também com email -->
+
+//painel
+<!-- Fazer pagina do painel -->
+<!-- Se user não estiver conectado, não consegue entrar no painel. Redireciona para cadastro. -->

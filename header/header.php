@@ -8,7 +8,9 @@
     }
 
 ?>
-
+<style>
+    <?php include("header.css"); ?>
+</style>
 
 <header id="header">
         <div class="container">

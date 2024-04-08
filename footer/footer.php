@@ -1,4 +1,8 @@
+<style>
+    <?php include("footer_style.css"); ?>
+</style>
 <footer id="footer">
+
         <div class="container-footer">
             <div class="footer-links">
                 <div class="footer-section">
