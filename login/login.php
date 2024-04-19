@@ -1,5 +1,5 @@
 <?php
-include_once("../connect.php");
+require("../connect.php");
 
 if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
     if(strlen($_POST['doc_login']) < 1) {
