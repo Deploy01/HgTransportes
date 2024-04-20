@@ -17,7 +17,7 @@
         extract($_POST);
         require("../connect.php");
 
-        $id = isset($_GET['id']);
+        $id = $_GET['id'];
         
         $userQuery = mysqli_query($con, "SELECT * FROM `userdata_cadastro` WHERE `id` = '$id'");
         $user = mysqli_fetch_assoc($userQuery);
@@ -33,13 +33,15 @@
             <div class="user-info">
                     <span>Alterar dados</span>
                     <form method="post" action="alterarDados.act.php">
-                        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">    
+                        <input type="hidden" name="id" value="<?php echo $_GET['id']?>">
                         <p>Nome: </p>
                         <input type="text" name="nome" value="<?php echo $user['nome']; ?>">
-                        <div class="user-info-password">
-                            <p>Senha</p>
-                            <input type="password" name="senha">
-                        </div>
+
+                        <p>Email: </p>
+                        <input type="text" name="email" value="<?php echo $user['email']; ?>" readonly>
+
+                        <p>Documento: </p>
+                        <input type="text" name="doc" value="<?php echo $user['doc']; ?>" readonly>
                         <div class="find-user">
                             <input type="submit" value="Alterar" class="submitInput">
                         </div>
@@ -52,3 +54,4 @@
 </html>
 </body>
 </html>
+
