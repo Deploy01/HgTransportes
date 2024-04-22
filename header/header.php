@@ -1,5 +1,15 @@
 <?php 
     session_start();
+    require("../connect.php");
+    if (isset($_SESSION['id'])) {
+        $idPanel = $_SESSION['id'];
+    } else {
+        $idPanel = isset($_GET['id']) ? $_GET['id'] : null; // se tem ou não um id logado
+    }
+
+    $userQueryPanel = mysqli_query($con, "SELECT * FROM `userdata_cadastro` WHERE `id` = '$idPanel'");
+    $userPanel = mysqli_fetch_assoc($userQueryPanel);
+
 
     if(isset($_SESSION['nome'])) { 
         $route = $_SESSION['nome'];
@@ -8,11 +18,14 @@
     }
 
 ?>
+
 <style>
     <?php include("header.css"); ?>
 </style>
 
 <header id="header">
+    
+        <input type="hidden" name="id" value="<?php echo isset($idPanel) ? $idPanel : ''; ?>">
         <div class="container">
             <div class="row-header">
                 <div class="logo">
@@ -40,7 +53,9 @@
                         ?>
                     <div id="display_menu">
                         
-                        <a href="../painel/painel.php">Painel</a>
+                        <?php 
+                            echo "<a href='../painel/painel.php?id=$idPanel'>Painel</a>";                       
+                       ?>
                         <form action="../login/logout.php" method="post">
                             <input type="submit" name="logout" value="Sair" id="input_logout">
                         </form>

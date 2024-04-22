@@ -1,6 +1,19 @@
+    <?php
+        session_start();
+        extract($_POST);
+        require("../connect.php");
 
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        
+        $userQuery = mysqli_query($con, "SELECT * FROM `userdata_cadastro` WHERE `id` = '$id'");
+        $user = mysqli_fetch_assoc($userQuery);
 
-<body>
+        if($_SESSION['id'] != $user['id']) {
+            die("Você não tem permissão");
+
+        }
+    ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,17 +25,6 @@
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <?php
-        session_start();
-        extract($_POST);
-        require("../connect.php");
-
-        $id = $_GET['id'];
-        
-        $userQuery = mysqli_query($con, "SELECT * FROM `userdata_cadastro` WHERE `id` = '$id'");
-        $user = mysqli_fetch_assoc($userQuery);
-
-    ?>
 
 
     <main>

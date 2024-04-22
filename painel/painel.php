@@ -1,8 +1,10 @@
 <?php 
-require('../connect.php');
-extract($_POST);
-$user = mysqli_query($con, "SELECT * FROM userdata_cadastro");
-$userId = mysqli_fetch_assoc($user);
+    require('../connect.php');
+    extract($_POST);
+
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
+    $user = mysqli_query($con, "SELECT * FROM userdata_cadastro");
+    $userId = mysqli_fetch_assoc($user);
 
 ?>
 
@@ -15,12 +17,13 @@ $userId = mysqli_fetch_assoc($user);
     <link rel="stylesheet" href="painel.css">
 </head>
 <body>
+
+
     <?php include('../header/header.php'); ?>
 
     <p>Bem vindo ao painel, <?php echo $_SESSION['nome']; ?>!</p>
     <?php 
-    
-        echo "<a href='../alterarDados/alterarDados.php?id=$userId[id]'>Alterar dados</a>"; 
+        echo "<a href='../alterarDados/alterarDados.php?id=$_SESSION[id]'>Alterar dados</a>"; 
     ?>
     <a href="../index/index.php">Pagina principal</a>
 

@@ -21,6 +21,9 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
             }
             $_SESSION['id'] = $user['id'];
             $_SESSION['nome'] = $user['nome'];
+
+            $idPanel = $_SESSION['id'];
+
         
             header('location:../index/index.php');
         } else {
@@ -45,7 +48,7 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
     <main>
         <div class="container">
             <div class="logo">
-                <a href="../index.php"><img src="../img/image.png" alt=""></a>
+                <a href="../index/index.php"><img src="../img/image.png" alt=""></a>
             </div>
             <div class="user-info">
                     <span>Fazer login</span>
