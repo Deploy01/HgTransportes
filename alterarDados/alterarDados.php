@@ -1,17 +1,18 @@
     <?php
-        session_start();
         extract($_POST);
         require("../connect.php");
+        require("../login/sec.php");
+        
+        $id = $_GET['id'];
+        if($_SESSION['id'] != $id) {
 
-        $id = isset($_GET['id']) ? $_GET['id'] : null;
+            die("Você não tem permissão");
+
+        }
         
         $userQuery = mysqli_query($con, "SELECT * FROM `userdata_cadastro` WHERE `id` = '$id'");
         $user = mysqli_fetch_assoc($userQuery);
 
-        if($_SESSION['id'] != $user['id']) {
-            die("Você não tem permissão");
-
-        }
     ?>
 
 <!DOCTYPE html>
@@ -35,7 +36,7 @@
             <div class="user-info">
                     <span>Alterar dados</span>
                     <form method="post" action="alterarDados.act.php">
-                        <input type="hidden" name="id" value="<?php echo $_GET['id']?>">
+                        <input type="hidden" name="id" value="<?php echo $id?>">
                         <p>Nome: </p>
                         <input type="text" name="nome" value="<?php echo $user['nome']; ?>">
 

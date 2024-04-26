@@ -1,6 +1,7 @@
 <?php
 require("../connect.php");
 
+
 if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
     if(strlen($_POST['doc_login']) < 1) {
         echo "Preencha o seu documento";
@@ -21,8 +22,8 @@ if (isset($_POST['doc_login']) || isset($_POST['senha_login'])){
             }
             $_SESSION['id'] = $user['id'];
             $_SESSION['nome'] = $user['nome'];
+            $_SESSION['logado'] = true;
 
-            $idPanel = $_SESSION['id'];
 
         
             header('location:../index/index.php');
